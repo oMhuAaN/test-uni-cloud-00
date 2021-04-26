@@ -7,6 +7,7 @@
 	</view>
 </template>
 
+
 <script>
 	export default {
 		data() {
@@ -15,7 +16,8 @@
 			}
 		},
 		onLoad() {
-
+			
+			
 		},
 		methods: {
 
