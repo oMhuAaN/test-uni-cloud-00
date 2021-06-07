@@ -4,6 +4,7 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
+		<button type="default" @click="handleClick">执行云函数</button>
 	</view>
 </template>
 
@@ -16,11 +17,24 @@
 			}
 		},
 		onLoad() {
-			
-			
+
+
 		},
 		methods: {
-
+			handleClick(){
+				uniCloud.callFunction({
+					name:'f1',
+					data:{
+						name:'小花'
+					},
+					success(res) {
+						console.log('res',res)
+					},
+					fail() {
+						
+					}
+				})
+			}
 		}
 	}
 </script>
